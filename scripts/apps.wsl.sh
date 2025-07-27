@@ -5,9 +5,6 @@ set -e
 echo 'Updating package lists and upgrading...'
 sudo apt update && sudo apt upgrade -y
 
-echo 'Installing base packages (curl, wget, gnupg)...'
-sudo apt install -y curl wget gnupg
-
 echo 'Installing Docker...'
 curl -fsSL https://get.docker.com | sh
 

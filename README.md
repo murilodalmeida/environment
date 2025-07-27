@@ -42,9 +42,12 @@ From here use terminal with bash and elevated permissions are no longer required
 ## 3. Installing and Configuring WSL
 
 ```bash
-    # Install Debian before continuing
+    # Install Debian and log in to it before continuing
     wls --update && wsl --install Debian
-
-    # Install apps
-    wsl -d Debian -- bash -c curl -sSL "https://raw.githubusercontent.com/murilodalmeida/environment/refs/heads/main/scripts/apps.wsl.sh" | bash
+    
+    # Installing required apps
+    sudo apt install -y curl wget gnupg
+    
+    # Installing the rest of the apps
+    curl -sSL "https://raw.githubusercontent.com/murilodalmeida/environment/refs/heads/main/scripts/apps.wsl.sh" | bash
 ```
