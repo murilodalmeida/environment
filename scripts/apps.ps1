@@ -13,6 +13,7 @@ $apps = @(
     "Mozilla.Firefox -h"
     "IDRIX.VeraCrypt -h"
     "7zip.7zip -h"
+    "Rclone.Rclone -h"
     "Parsec.Parsec -h"
     "OpenJS.NodeJS.LTS -h"
     "Genymobile.scrcpy -h"
