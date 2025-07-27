@@ -7,6 +7,7 @@ sudo apt update && sudo apt upgrade -y
 
 echo 'Installing Docker...'
 curl -fsSL https://get.docker.com | sh
+sudo usermod -aG docker $USER
 
 echo 'Installing OpenTofu...'
 curl -fsSL https://get.opentofu.org/install-opentofu.sh | sh

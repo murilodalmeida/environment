@@ -2,7 +2,9 @@
 
 A quick way to setup a new windows computer with the apps I use and all of my preferences. Multiple system restarts are expected.
 
-Before continuing update drivers and whatever you need manually. 
+Before continuing update drivers and whatever you need manually.
+
+*I didn't fully tested everything nor a really plan on doing, use it at your own risk.*
 
 ## 1. First Steps - Enabling features and installing apps.
 
@@ -36,7 +38,7 @@ From here use terminal with bash and elevated permissions are no longer required
 
 ```bash
     # Configuring SSH key for git, .gitconfig file and .bashrc profiles.
-    curl -sSL "https://raw.githubusercontent.com/murilodalmeida/environment/refs/heads/main/scripts/profiles.sh" | bash
+    curl -sSL "https://raw.githubusercontent.com/murilodalmeida/environment/refs/heads/main/scripts/profiles.win.sh" | bash
 ```
 
 ## 3. Installing and Configuring WSL
@@ -50,4 +52,7 @@ From here use terminal with bash and elevated permissions are no longer required
     
     # Installing the rest of the apps
     curl -sSL "https://raw.githubusercontent.com/murilodalmeida/environment/refs/heads/main/scripts/apps.wsl.sh" | bash
+
+    # Configuring the profiles
+    curl -sSL "https://raw.githubusercontent.com/murilodalmeida/environment/refs/heads/main/scripts/profiles.wsl.sh" | bash
 ```
