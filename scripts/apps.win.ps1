@@ -23,6 +23,7 @@ $apps = @(
     "Discord.Discord -h"
     "Valve.Steam -i"
     "JetBrains.Rider -i"
+    "bluemars.ClipX -i"
 )
 
 Write-Host "`nInstalling apps..." -ForegroundColor Green
@@ -33,4 +34,13 @@ foreach ($app in $apps) {
 
     Write-Host "Installing $package..." -ForegroundColor Yellow
     winget install -e $flag --id $package
+}
+
+
+# --- Adding make to environment path ---
+$makePath = "C:\Program Files (x86)\GnuWin32\bin"
+$currentEnv = [Environment]::GetEnvironmentVariable("Path", "User")
+if ($currentEnv -notlike "*$makePath*") {
+    [Environment]::SetEnvironmentVariable("Path", "$currentEnv;$makePath", "User")
+    Write-Host "make path added to user PATH." -ForegroundColor Green
 }

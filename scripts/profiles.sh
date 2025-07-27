@@ -51,6 +51,15 @@ read -r -d '' gitconfig_content <<'EOF'
 	co = checkout
 EOF
 
+# --- .wslconfig content ---
+read -r -d '' wslconfig_content <<'EOF'
+[wsl2]
+memory=8GB
+processors=4
+swap=2GB
+EOF
+
 # --- Write files if they don't exist ---
 [[ ! -f ~/.bashrc ]] && echo "$bashrc_content" > ~/.bashrc && echo "~/.bashrc created."
 [[ ! -f ~/.gitconfig ]] && echo "$gitconfig_content" > ~/.gitconfig && echo "~/.gitconfig created."
+[[ ! -f ~/.wslconfig ]] && echo "$wslconfig_content" > ~/.wslconfig && echo "~/.wslconfig created."

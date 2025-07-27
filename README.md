@@ -24,7 +24,7 @@ WSL is required but ther than that, pick and choose whatever.
     Enable-WindowsOptionalFeature -Online -FeatureName "Containers-DisposableClientVM" -All -NoRestart
 
     # Install Apps
-    Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/murilodalmeida/environment/refs/heads/main/scripts/apps.ps1" -UseBasicParsing).Content
+    Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/murilodalmeida/environment/refs/heads/main/scripts/apps.win.ps1" -UseBasicParsing).Content
 
     # Restart the system to apply changes and whatnot.
     Restart-Computer -Force
@@ -42,6 +42,9 @@ From here use terminal with bash and elevated permissions are no longer required
 ## 3. Installing and Configuring WSL
 
 ```bash
-    # Update, Install and Configure WSL with all packages.
-    curl -sSL "https://raw.githubusercontent.com/murilodalmeida/environment/refs/heads/main/scripts/wsl.sh" | bash
+    # Install Debian before continuing
+    wls --update && wsl --install Debian
+
+    # Install apps
+    wsl -d Debian -- bash -c curl -sSL "https://raw.githubusercontent.com/murilodalmeida/environment/refs/heads/main/scripts/apps.wsl.sh" | bash
 ```
