@@ -21,6 +21,7 @@ $apps = @(
     "Stremio.Stremio -h"
     "Git.Git -h"
     "Discord.Discord -h"
+    "Brave.Brave -h"
     "Valve.Steam -i"
     "JetBrains.Rider -i"
     "bluemars.ClipX -i"
